@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      Sam Eisenstat
+    </title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="title" property="og:title" content="Sam Eisenstat">
+    <meta name="author" content="Sam Eisenstat">
+    <meta name="keywords" content="Sam Eisenstat, agency, trust, meaning, language, value, probability, induction, mathematics, philosophy, condensation, factored space model, logical induction, Garrabrant induction, decision theory, algorithmic information">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container mt-4">
+      <div id="intro" class="mb-5">
+        <h1>
+          Sam Eisenstat
+        </h1>
+        <p>
+        I am a research fellow at the Machine Intelligence Research Institute in Berkeley, California.
+        </p>
+        <p>
+        I study agency, trust, meaning, language, value, probability, and induction, mostly from a mathematical point of view.
+        </p>
+      </div>
+      <h2>
+        Writings
+      </h2>
+      <h3 class="fs-5">
+        Condensation
+      </h3>
+      <p>
+      At present, a <a href="doc/condensation-25-04.pdf">précis</a> with some of the results from the theory of condensation is available.
+      </p>
+      <p>
+      I spoke on condensation at the MAISU conference. A <a href="https://drive.google.com/file/d/1v9DQHvzh4HZK5SsxPLToAejNmh_8v8TS/view?usp=sharing">recording</a> is available (start at timestamp 7:52).
+      </p>
+      <h3 class="fs-5">
+        Factored space models
+      </h3>
+      <p>
+      <a href="https://arxiv.org/abs/2412.02579">Factored space models: Towards causality between levels of abstraction</a> (submitted) joint with Scott Garrabrant, Matthias Georg Mayer, Magdalena Wache, Leon Lang, and Holger Dell
+      </p>
+      <p>
+      Abstract: Causality plays an important role in understanding intelligent behavior, and there is a wealth of literature on mathematical models for causality, most of which is focused on causal graphs. Causal graphs are a powerful tool for a wide range of applications, in particular when the relevant variables are known and at the same level of abstraction. However, the given variables can also be unstructured data, like pixels of an image. Meanwhile, the causal variables, such as the positions of objects in the image, can be arbitrary deterministic functions of the given variables. Moreover, the causal variables may form a hierarchy of abstractions, in which the macro-level variables are deterministic functions of the micro-level variables. Causal graphs are limited when it comes to modeling this kind of situation. In the presence of deterministic relationships there is generally no causal graph that satisfies both the Markov condition and the faithfulness condition. We introduce factored space models as an alternative to causal graphs which naturally represent both probabilistic and deterministic relationships at all levels of abstraction. Moreover, we introduce structural independence and establish that it is equivalent to statistical independence in every distribution that factorizes over the factored space. This theorem generalizes the classical soundness and completeness theorem for d-separation.
+      </p>
+      <h2>
+        Contact
+      </h2>
+      <div id="contact">
+        <a id="contact-button">
+          Click for contact info
+        </a>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      document.getElementById("contact-button")
+        .addEventListener("click", function(e) {
+            let a = [115, 97, 111, 116, 109, 110, 113, 108, 101, 64, 46, 111,
+                    115, 103, 104, 98, 105, 97, 105, 121, 101, 101, 122, 108,
+                    109, 110, 114, 111, 114, 119, 100, 102, 99, 103, 97, 112,
+                    116, 114, 110, 103, 108];
+            let b = Array.from({ length: 20 }, (_, i) => {
+              return String.fromCodePoint(a[i*i % 41]);
+            });
+            document.getElementById("contact").textContent = b.join('');
+          });
+    </script>
+  </body>
+</html>
